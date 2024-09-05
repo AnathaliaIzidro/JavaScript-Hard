@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 26</title>
+    <link rel="stylesheet" href="css/desafio26.css">
+</head>
+<body>
+    <header>
+        <h1>Otimização de Cálculos</h1>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+    <main>
+        <div class="calculator-container">
+            <div class="input-group">
+                <label for="fibonacci-input">Calcular Fibonacci de:</label>
+                <input type="number" id="fibonacci-input" min="0" max="100" value="10">
+            </div>
+            <button id="calculate-fib">Calcular Fibonacci</button>
+            <div id="fib-result"></div>
+        </div>
+    </main>
+    <script src="js/otimizacao-calculos.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>

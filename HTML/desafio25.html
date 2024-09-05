@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 25</title>
+    <link rel="stylesheet" href="css/desafio25.css">
+</head>
+<body>
+    <header>
+        <h1>Validação de Compilador</h1>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+    <main>
+        <div class="compiler-container">
+            <textarea id="code-input" placeholder="Digite seu código aqui..."></textarea>
+            <button id="validate-code">Validar Código</button>
+            <div id="validation-result"></div>
+        </div>
+    </main>
+    <script src="js/validacoes-compilador.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>

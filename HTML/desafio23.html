@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 23</title>
+    <link rel="stylesheet" href="css/desafio23.css">
+</head>
+<body>
+    <header>
+        <h1>Corrida de Pods</h1>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+    <main>
+        <div class="race-container">
+            <div class="pod" id="pod1">Pod 1</div>
+            <div class="pod" id="pod2">Pod 2</div>
+            <div class="pod" id="pod3">Pod 3</div>
+            <div class="pod" id="pod4">Pod 4</div>
+        </div>
+        <button id="start-race">Iniciar Corrida</button>
+        <div id="race-result"></div>
+    </main>
+    <script src="js/corrida-pods.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>

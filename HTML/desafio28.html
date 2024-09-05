@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 28</title>
+    <link rel="stylesheet" href="css/desafio28.css">
+</head>
+<body>
+    <header>
+        <h1>RPG de Exploração Espacial</h1>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+    <main>
+        <div class="rpg-container">
+            <div class="explorer-stats">
+                <h2>Estatísticas do Explorador</h2>
+                <p><strong>Nome:</strong> <span id="explorer-name">John</span></p>
+                <p><strong>Nível:</strong> <span id="explorer-level">1</span></p>
+                <p><strong>Experiência:</strong> <span id="explorer-experience">0</span></p>
+                <p><strong>Ranque:</strong> <span id="explorer-ranque">Novato</span></p>
+            </div>
+            <div class="planet-exploration">
+                <h2>Explorar Planeta</h2>
+                <form id="explore-form">
+                    <div class="form-group">
+                        <label for="planet-select">Selecione um Planeta:</label>
+                        <select id="planet-select" required>
+                            <option value="">--Escolha--</option>
+                            <option value='{"id":"1","nome":"Planeta A","hostilidade":"pacifico"}'>Planeta A (Pacífico)</option>
+                            <option value='{"id":"2","nome":"Planeta B","hostilidade":"neutro"}'>Planeta B (Neutro)</option>
+                            <option value='{"id":"3","nome":"Planeta C","hostilidade":"hostil"}'>Planeta C (Hostil)</option>
+                        </select>
+                    </div>
+                    <button type="submit">Explorar</button>
+                </form>
+                <div id="exploration-result"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/hora-jogar.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>

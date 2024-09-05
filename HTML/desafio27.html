@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 27</title>
+    <link rel="stylesheet" href="css/desafio27.css">
+</head>
+<body>
+    <header>
+        <h1>Encontrando Conexões</h1>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+    <main>
+        <div class="connection-container">
+            <h2>Dados de Conexões</h2>
+            <pre id="connection-data">
+{
+    "id": "1",
+    "connections": [
+        { "connection": { "_id": "2", "label": "Conn 2" } },
+        { "connection": { "_id": "3", "label": "Conn 3" } }
+    ],
+    "other": {
+        "connection": { "_id": "4", "label": "Conn 4" }
+    }
+}
+            </pre>
+            <button id="find-connections">Encontrar Conexões</button>
+            <div id="connections-result"></div>
+        </div>
+    </main>
+    <script src="js/encontrando-conexoes.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 24</title>
+    <link rel="stylesheet" href="css/desafio24.css">
+</head>
+<body>
+    <header>
+        <h1>Validação de Usuário</h1>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+    <main>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <small id="feedback" class="feedback"></small>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <div id="registration-result"></div>
+    </main>
+    <script src="js/usuario.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>
